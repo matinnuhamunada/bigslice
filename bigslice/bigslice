@@ -1,4 +1,4 @@
-#!/data/a/matinnu/test/bgcflow/.snakemake/conda/d1d452d8b2d697eaf5b254928bdfe213_/bin/python
+#!/usr/bin/env python3
 # vim: set fileencoding=utf-8 :
 #
 # Copyright (C) 2019 Satria A. Kautsar
