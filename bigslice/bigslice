@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/data/a/matinnu/test/bgcflow/.snakemake/conda/d1d452d8b2d697eaf5b254928bdfe213_/bin/python
 # vim: set fileencoding=utf-8 :
 #
 # Copyright (C) 2019 Satria A. Kautsar
@@ -485,7 +485,7 @@ def parse_input_gbk(arguments: tuple):
 
 def query_mode(report_name, input_folder, input_run_id, pool,
                program_db_folder, source_db_path,
-               n_ranks, reports_folder, cache_folder):
+               n_ranks, reports_folder, cache_folder, normalize_feature=True):
     # !! this is just a quick prototype to meet the paper deadline
     # should be properly refactored later on !!
 
@@ -762,7 +762,8 @@ def query_mode(report_name, input_folder, input_run_id, pool,
                 top_hits=n_ranks,
                 threshold=None,
                 bgc_database=query_db,
-                cache_folder=cache_folder
+                cache_folder=cache_folder,
+                normalize_feature=normalize_feature
             ):
                 membership.save(query_db)
             query_db.commit_inserts()
